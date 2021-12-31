@@ -30,5 +30,6 @@ ___
 
 
 ----
-Refrences:
-<https://www.42madrid.com/>
+Refrences:  
+<https://www.42madrid.com/>  
+<https://www.markdownguide.org/>
