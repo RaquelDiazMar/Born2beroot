@@ -46,9 +46,9 @@ Defaults        passwd_tries=3                            # to limit authenticat
 Defaults        badpass_message="<custom-error-message>"  # to add a custom error message in the event of an incorrect password;  
 
 > $ sudo mkdir /var/log/sudo    # to log all sudo commands   
-<~ ~ ~>
-Defaults        logfile="/var/log/sudo/<filename>"
-<~ ~ ~>
+<~~~>  
+Defaults        logfile="/var/log/sudo/<filename>"  
+<~~~>  
 
 Defaults        log_input,log_output   
 Defaults        iolog_dir="/var/log/sudo"                 # to archive all sudo inputs&outputs to /var/log/sudo
@@ -58,7 +58,16 @@ Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
     
 
 ### SSH
-
+1. Installing and configuring SSH   
+> $ sudo apt install openssh-server   
+    
+> $ dpkg -l | grep ssh. # to verify succesful installation   
+> $ sudo vi /etc/ssh/sshd_config  
+    
+Replace `13 #Port 22` with `13 Port 4242`   
+and also `32 #PermitRootLogin prohibit-password` with `32 PermitRootLogin no`  
+    
+> $ sudo service ssh status. # to check SSH status 
     
 
 
