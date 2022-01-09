@@ -67,7 +67,8 @@ Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
 Replace `13 #Port 22` with `13 Port 4242`   
 and also `32 #PermitRootLogin prohibit-password` with `32 PermitRootLogin no`  
     
-> $ sudo service ssh status. # to check SSH status 
+> $ sudo service ssh status  # to check SSH status or `systemctl ststus ssh` 
+    
     
 
 
